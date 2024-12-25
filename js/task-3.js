@@ -1,7 +1,6 @@
-const gallery = document.querySelector('.gallery');
-const imagesMarkup = images
-  .map(({ url, alt }) => {
-    return `<li><img class="img" src="${url}" alt="${alt}"></li>`;
-  })
-  .join('');
-gallery.insertAdjacentHTML('beforeend', imagesMarkup);
+const textInput = document.querySelector('#name-input');
+const textName = document.querySelector('#name-output');
+textInput.addEventListener('input', event => {
+  const text = event.target.value.trim();
+  textName.textContent = text ? text : 'Anonymous';
+});
